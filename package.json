@@ -1,19 +1,23 @@
 {
   "description": "Development environment for the CodeMirror 6 packages",
   "scripts": {
+    "build": "node bin/cm.js install",
     "test": "node bin/cm.js test",
     "test-node": "node bin/cm.js test --no-browser",
     "prepare": "node bin/cm.js build",
-    "dev": "node bin/cm.js devserver"
+    "dev": "node bin/cm.js devserver",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build"
   },
   "author": "Marijn Haverbeke <marijn@haverbeke.berlin>",
   "license": "MIT",
   "devDependencies": {
     "@codemirror/buildhelper": "^1.0.0",
+    "builddocs": "^1.0.0",
     "esmoduleserve": "^0.2.0",
-    "serve-static": "^1.14.1",
     "getdocs-ts": "^1.0.0",
-    "builddocs": "^1.0.0"
+    "gh-pages": "^6.1.1",
+    "serve-static": "^1.14.1"
   },
   "repository": {
     "type": "git",
