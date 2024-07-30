@@ -7,7 +7,7 @@
     "prepare": "node bin/cm.js build",
     "dev": "node bin/cm.js devserver",
     "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d demo"
+    "deploy" : "gh-pages -d build"
   },
   "author": "Marijn Haverbeke <marijn@haverbeke.berlin>",
   "license": "MIT",
